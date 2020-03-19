@@ -1,2 +1,2 @@
 ﻿  Test.c
-  Test_03_18_分支与循环语句.vcxproj -> C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_03_18_分支与循环语句\Debug\Test_03_18_分支与循环语句.exe
+LINK : fatal error LNK1168: 无法打开 C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_03_18_分支与循环语句_1\Debug\Test_03_18_分支与循环语句.exe 进行写入
