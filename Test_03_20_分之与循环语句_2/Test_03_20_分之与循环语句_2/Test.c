@@ -3,6 +3,108 @@
 #include<math.h>
 
 
+/*
+//屏幕上输出9*9乘法口诀表
+#include<stdio.h>
+int main()
+{
+	for (int i = 1; i <= 9; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			printf("%d*%d=%d ", j, i, j * i);
+			if (i == j)
+				printf("\n");
+		}
+	}
+	return 0;
+}
+
+
+//求10 个整数中最大值
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	int max = 0;
+	int arr[10] = { 0 };
+	printf("please input ten num:\n");
+	for (i = 0; i < 10; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	printf("max = %d\n", max);
+	return 0;
+}
+
+//计算1/1-1/2+1/3-1/4+1/5 …… + 1/99 - 1/100 的值，打印出结果
+#include<stdio.h>
+int main()
+{
+	int i = 1;
+	double sum = 0;
+	double n = 1;
+	for (i = 1; i <= 100; i++)
+	{
+		sum = sum + n / i;
+		n = n * -1;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+
+
+
+
+//编写程序数一下 1到 100 的所有整数中出现多少个数字9
+#include<stdio.h>
+int main()
+{
+	int count = 0;
+	for (int i = 0; i <= 100; ++i)
+	{
+		//判断个位
+		if (i % 10 == 9)
+		{
+			count++;
+		}
+		//判断十位
+		if (i / 10 == 9)
+		{
+			count++;
+		}
+	}
+	printf("出现了%d个数字9",count);
+	return 0;
+}
+
+
+
+int main()
+{
+	int a = 0, b = 0;
+	for (a = 1, b = 1; a <= 100; a++)
+	{
+		if (b >= 20) break;
+		if (b % 3 == 1)
+		{
+			b = b + 3;//4   7  10 13  16  19 22
+			continue;
+		}
+		b = b - 5;
+	}
+	printf("%d\n", a);
+	return 0;
+}
+
+
 //上面程序输入顺序：输入A，enter，B，再按enter。
 //其中A将赋给a,换行符enter将赋给b,B将赋给c，
 //最后的enter将敲下的上述字符输入计算机。
@@ -19,7 +121,6 @@ int main()
 	return 0;
 }
 
-/*
 int main()
 {
 	char a, b;
