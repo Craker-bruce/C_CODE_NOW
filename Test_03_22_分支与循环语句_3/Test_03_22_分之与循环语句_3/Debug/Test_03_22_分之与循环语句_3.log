@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Test_03_22_分之与循环语句_3.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Test.c
+C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_03_22_分支与循环语句_3\Test_03_22_分之与循环语句_3\Test.c(18,8): warning C4473: “scanf”: 没有为格式字符串传递足够的参数
+C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_03_22_分支与循环语句_3\Test_03_22_分之与循环语句_3\Test.c(18,8): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_03_22_分支与循环语句_3\Test_03_22_分之与循环语句_3\Test.c(18,8): message : 缺失的可变参数 1 为格式字符串“%s”所需
+  Test_03_22_分之与循环语句_3.vcxproj -> C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_03_22_分支与循环语句_3\Debug\Test_03_22_分支与循环语句_3.exe
