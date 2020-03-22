@@ -4,6 +4,38 @@
 #include<Windows.h>//Sleep();睡眠函数，单位是毫秒
 #include<string.h>
 
+#include<stdio.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int k = 6;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int left = 0;
+	int right = sz - 1;
+	while (left <= right)
+	{
+		int mid = (left + right) / 2;
+		if (arr[mid] < k)
+		{
+			left = mid + 1;
+		}
+		else if (arr[mid] > k)
+		{
+			right = mid - 1;
+		}
+		else
+		{
+			printf("找到了,下标是%d\n", mid);
+			break;
+		}
+	}
+	if (left > right)
+	{
+		printf("找不到了.\n");
+	}
+	return 0;
+}
+/*
 //goto语句
 //关机程序
 int main()
@@ -25,7 +57,7 @@ again:
 		goto again;
 	}
 }
-
+*/
 //如果引入自己创建的头文件
 //#include"test.h"
 //如果引用库里面的头文件
@@ -96,6 +128,7 @@ int main()
  //编写int binsearch(int x, int v[], int n);
  //功能：在v[0]<= v[1] <= v[2] <= …. <= v[n - 1]的数组中查找x
  //方法二折半查找/二分查找
+ #include<stdio.h>
  int main()
  {
 	 int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
