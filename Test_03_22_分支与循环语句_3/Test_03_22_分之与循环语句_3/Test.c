@@ -48,7 +48,7 @@ again:
 	printf("你的电脑在一分钟内关机，如果输入：我是猪，就取消关机\n");
 	printf("请输入:");
 	scanf("%s,input");
-	if (0 == strcmp(input, "我是猪"))
+	if (0 == strcmp(input,"我是猪"))
 	{
 		system("shutdown -a");//取消关机
 	}
@@ -77,7 +77,8 @@ int main()
 		scanf("%s", password);
 
 		//判断
-		//两个字符串比较不能直接用==，而应该使用strcmp(),stringcompare
+		//两个字符串比较不能直接用==，
+		//而应该使用strcmp(),stringcompare
 		if (0==strcmp(password,"123456"))
 		{
 			printf("登陆成功\n");
