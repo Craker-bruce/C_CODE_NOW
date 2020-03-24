@@ -60,8 +60,6 @@ int main()
 			printf("ÍË³öÓÎÏ·\n");
 			break;
 		default:
-
-
 			printf("Ñ¡Ôñ´íÎó\n");
 			break;
 		}
