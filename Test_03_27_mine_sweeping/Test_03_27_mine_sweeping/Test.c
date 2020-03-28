@@ -1,12 +1,11 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
 #include"game.h"
 
 void menu()
 {
 	printf("********************\n");
+	printf("*欢迎来到扫雷小游戏*\n");
 	printf("***** 1.play *******\n");
-	printf("***** 2.exit *******\n");
+	printf("***** 0.exit *******\n");
 	printf("********************\n");
 }
 void game()
@@ -23,6 +22,7 @@ void game()
 	//DisplayBoard(show,ROW,COL);
 	//布置雷
 	SetMine(mine,ROW,COL);
+	//DisplayBoard(mine, ROW, COL);
 	DisplayBoard(show, ROW, COL);
 	//排查雷
 	FindMine(mine, show, ROW, COL);
@@ -34,7 +34,7 @@ void test()
 	do
 	{
 		menu();
-		printf("请选择:\n");
+		printf("请选择:");
 		scanf("%d", &input);
 		switch (input)
 		{
