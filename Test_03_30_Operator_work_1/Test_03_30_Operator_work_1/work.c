@@ -93,7 +93,7 @@ int main()
 	return 0;
 }
 */
-
+/*
 #include<stdio.h>
 int Count(int a)
 {
@@ -117,7 +117,7 @@ int main()
 	}
 	return 0;
 }
-
+*/
 /*
 #include<stdio.h>
 int main()
