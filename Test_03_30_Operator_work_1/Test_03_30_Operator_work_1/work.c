@@ -137,3 +137,204 @@ int main()
 	return 0;
 }
 */
+//编写一个函数 reverse_string(char * string)（递归实现）
+//实现：将参数字符串中的字符反向排列。
+//要求：不能使用C函数库中的字符串操作函数。
+#include<stdio.h>
+#include<string.h>
+/*
+int reverse_string(char* str)
+{
+	int left = 0;
+	int right = strlen(str) - 1;
+	while (left<right)
+	{
+		char tmp = str[left]; //str[left] -- 数组的形式   与*（str+left) 完全等价
+		str[left] = str[right];
+		str[right] = tmp;
+		left++;
+		right--;
+	}
+	return str;
+}
+
+void reverse_string(char* str)
+{
+	char tmp = str[0];//1
+	int len = strlen(str);
+	str[0] = str[len - 1];//2
+	str[len - 1] = '\0';//3
+	if (strlen(str + 1) >= 2)
+		reverse_string(str + 1);//4
+	str[len - 1] = tmp;//5
+}
+int main()
+{
+	char arr[] = "hello bit";
+	reverse_string(arr);
+	printf("%s\n", arr);
+	return 0;
+}
+*/
+
+/*
+//编写一个函数实现n的k次方，使用递归实现。
+#include<stdio.h>
+double Power(int n, int k)
+{
+	if (k > 0)
+	{
+		return n * Power(n, --k);
+	}
+	else if(k==0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 1.0 / Power(n, -k);
+	}
+}
+int main()
+{
+	int n = 0;
+	int k = 0;
+	printf("please input two num:\n");
+	scanf("%d %d", &n, &k);
+	double ret = Power(n, k);
+	printf("%d的%d次方 = %lf\n", n, k, ret);
+	return 0;
+}
+*/
+/*
+//创建一个整形数组，完成对数组的操作
+//实现函数init() 初始化数组为全0
+//实现print()  打印数组的每个元素
+//实现reverse()  函数完成数组元素的逆置。
+#include<stdio.h>
+void init(int arr[], int sz)
+{
+	int i = 0;
+	printf("初始化数组：\n");
+	for (i = 0; i < sz; ++i)
+	{
+		arr[i] = 0;
+	}
+}
+void print(int arr[], int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; ++i)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+void reverse(int arr[], int sz)
+{
+	int i = 0;
+	int j = sz - 1;
+	printf("逆置\n");
+	while (i < j)
+	{
+		int tmp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = tmp;
+		++i;
+		--j;
+	}
+}
+int main()
+{
+	int arr[10] = { 2,6,1,3,7,8,0,9,11,22 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	printf("打印\n");
+	print(arr, sz);
+	reverse(arr, sz);
+	print(arr, sz);
+	init(arr, sz);
+	print(arr, sz);
+	return 0;
+}
+*/
+/*
+//将数组A中的内容和数组B中的内容进行交换。（数组一样大）
+#include<stdio.h>
+void Print(int arr[], int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; ++i)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+void Swap(int arr1[], int arr2[], int sz)
+{
+	int i = 0;
+	printf("交换数组arr1和arr2\n");
+	while (i < sz)
+	{
+		int tmp = arr1[i];
+		arr1[i] = arr2[i];
+		arr2[i] = tmp;
+		++i;
+	}
+}
+int main()
+{
+	int arr1[5] = { 1,2,3,4,5 };
+	int arr2[5] = { 6,7,8,9,10 };
+	int sz = sizeof(arr1) / sizeof(arr1[0]);
+	Print(arr1, sz);
+	Print(arr2, sz);
+	Swap(arr1, arr2, sz);
+	Print(arr1, sz);
+	Print(arr2, sz);
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main()
+{
+	int i = 1;
+	int ret = (++i) + (++i) + (++i);
+	printf("%d\n", ret);
+	printf("%d\n", i);
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+int i;
+int main()
+{
+	i--;
+	//-1
+	//1000 0000 0000 0000 0000 0000 0000 0001
+	//1111 1111 1111 1111 1111 1111 1111 1110
+	//1111 1111 1111 1111 1111 1111 1111 1111
+	if (i > sizeof(i))
+	{
+		printf(">\n");
+	}
+	else
+	{
+		printf("<\n");
+	}
+	return 0;
+}
+*/
+
+#include <stdio.h>
+int main()
+{
+	int a, b, c;
+	a = 5;
+	c = ++a;
+	b = ++c, c++, ++a, a++;
+	b += a++ + c;
+	printf("a = %d b = %d c = %d\n:", a, b, c);
+	return 0;
+}
