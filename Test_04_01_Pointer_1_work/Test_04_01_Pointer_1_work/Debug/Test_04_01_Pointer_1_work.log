@@ -1,5 +1,2 @@
 ﻿  work.c
-C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_04_01_Pointer_1_work\Test_04_01_Pointer_1_work\work.c(140,14): warning C4101: “z”: 未引用的局部变量
-C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_04_01_Pointer_1_work\Test_04_01_Pointer_1_work\work.c(140,8): warning C4101: “y”: 未引用的局部变量
-C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_04_01_Pointer_1_work\Test_04_01_Pointer_1_work\work.c(140,11): warning C4101: “x”: 未引用的局部变量
   Test_04_01_Pointer_1_work.vcxproj -> C:\Users\13279\Desktop\C\GitHub_Clone\C_CODE_NOW\Test_04_01_Pointer_1_work\Debug\Test_04_01_Pointer_1_work.exe

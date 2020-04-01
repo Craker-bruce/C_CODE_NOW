@@ -115,23 +115,39 @@ int main()
 }
 */
 
+/*
 //10.
 //求出0～100000之间的所有“水仙花数”并输出。
 //“水仙花数”是指一个n位数，其各位数字的n次方之和正好等于该数本身，
 //如 : 153＝1 ^ 3＋5 ^ 3＋3 ^ 3，则153是一个“水仙花数”。
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-	int i = 0;
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	for (i = 0; i <= 100000; ++i)
+	for (int i = 0; i <= 100000; ++i)
 	{
-		
+		int count = 1;
+		int tmp = i;
+		int sum = 0;
+		while (tmp / 10)
+		{
+			count++;
+			tmp = tmp / 10;
+		}
+		tmp = i;
+		while (tmp)
+		{
+			sum = sum + pow(tmp % 10, count);
+			tmp /= 10;
+		}
+		if (sum == i)
+		{
+			printf("%d ", i);
+		}
 	}
 	return 0;
 }
+*/
 
 //#include<stdio.h>
 //#include<math.h>
@@ -164,3 +180,40 @@ int main()
 //
 //	getchar();
 //}
+
+//11.用C语言在屏幕上输出以下图案：
+#include<stdio.h>
+int main()
+{
+	int line = 0;
+	int i = 0;
+	printf("please input a num:\n");
+	scanf("%d", &line);
+	for (i = 0; i < line; i++)
+	{
+		int j = 0;
+		for (j = 0; j < line - 1 - i; j++)
+		{
+			printf(" ");
+		}
+		for (j = 0; j < 2 * i + 1; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	for (i = 0; i < line - 1; i++)
+	{
+		int j = 0;
+		for (j = 0; j <= i; j++)
+		{
+			printf(" ");
+		}
+		for (j = 0; j < 2 * (line - 1 - i) - 1; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
